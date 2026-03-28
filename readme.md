@@ -1,40 +1,42 @@
 🚀 Barbearia RA — Sistema de Gestão
 
-📌 Visão GeralProjeto de painel de gestão para barbearia, desenvolvido em HTML, CSS e JavaScript (ESM) com integração ao Firebase (Firestore + Storage). Centraliza agenda, clientes, PDV, relatórios e configurações, com interface moderna e responsiva. Resolvi trabalhar com a manutenção do código, já que os links estavam quebrados e decidi me desafiar com algo novo que não havia mexido antes.
+📌 Visão Geral
+
+Projeto de painel de gestão para barbearia, desenvolvido em HTML, CSS e JavaScript (ESM) com integração ao Firebase (Firestore + Storage). Centraliza agenda, clientes, PDV, relatórios e configurações, com interface moderna e responsiva. Resolvi trabalhar com a manutenção do código, já que os links estavam quebrados e decidi me desafiar com algo novo que não havia mexido antes.
 
 🚀 Funcionalidades
 
-Cadastro, edição e cancelamento de agendamentos
+-Cadastro, edição e cancelamento de agendamentos
 
-Bloqueio de horários
+-Bloqueio de horários
 
-Validação dinâmica de conflitos
+-Validação dinâmica de conflitos
 
-Cadastro de clientes comuns e membros RA Club
+-Cadastro de clientes comuns e membros RA Club
 
-Edição, status ativo/pausado, exclusão
+-Edição, status ativo/pausado, exclusão
 
-Registro de pagamentos RA Club
+-Registro de pagamentos RA Club
 
-KPIs de membros ativos e receita estimada
+-KPIs de membros ativos e receita estimada
 
-Cadastro, edição e exclusão de produtos
+-Cadastro, edição e exclusão de produtos
 
-Registro de vendas com estoque e formas de pagamento
+-Registro de vendas com estoque e formas de pagamento
 
-Relatórios de serviços, produtos e despesas
+-Relatórios de serviços, produtos e despesas
 
-Exportação CSV
+-Exportação CSV
 
-KPIs e gráficos com Chart.js
+-KPIs e gráficos com Chart.js
 
-Horários do painel
+-Horários do painel
 
-Semana padrão
+-Semana padrão
 
-Exceções por salão/profissional
+-Exceções por salão/profissional
 
-Cadastro de profissionais e serviços
+-Cadastro de profissionais e serviços
 
 🗂️ Estrutura do Projeto
 
@@ -50,83 +52,83 @@ index.html
 
 🔄 Linha do Tempo das Manipulações
 
-Configuração inicial
+-Configuração inicial
 
-Projeto enviado ao GitHub
+-Projeto enviado ao GitHub
 
-Firebase Hosting configurado
+-Firebase Hosting configurado
 
-Firestore criado em modo de teste
+-Firestore criado em modo de teste
 
 Coleções no Firestore:
 
-profissionais criada com documento inicial
+-profissionais criada com documento inicial
 
-servicos corrigida (sem acento)
+-servicos corrigida (sem acento)
 
-config criada com horários e dias da semana
+-config criada com horários e dias da semana
 
 Primeiros testes no site:
 
-Agenda carregou corretamente
+-Agenda carregou corretamente
 
-Serviços não apareciam → corrigido nome da coleção
+-Serviços não apareciam → corrigido nome da coleção
 
-Manipulações no código (Clientes):
+-Manipulações no código (Clientes):
 
-Adição da função initClientesTab()
+-Adição da função initClientesTab()
 
-Tentativa de importar $ no topo do clientes.js → quebrou links
+-Tentativa de importar $ no topo do clientes.js → quebrou links
 
-Ajuste no index.html para ordem de scripts → erro $ is not defined
+-Ajuste no index.html para ordem de scripts → erro $ is not defined
 
-Restauração dos helpers no firebase.js → site voltou a funcionar
+-Restauração dos helpers no firebase.js → site voltou a funcionar
 
-Superação: entender que clientes.js não precisa importar $, pois já vem de firebase.js
+-Superação: entender que clientes.js não precisa importar $, pois já vem de firebase.js
 
 ⚠️ Erros enfrentados
 
-Cannot access '$' before initialization
+-Cannot access '$' before initialization
 
-Uncaught ReferenceError: $ is not defined
+-Uncaught ReferenceError: $ is not defined
 
-404 em clientes.js por caminho incorreto
+-404 em clientes.js por caminho incorreto
 
-Tracking Prevention bloqueando Boxicons e Chart.js (não crítico)
+-Tracking Prevention bloqueando Boxicons e Chart.js (não crítico)
 
 🛠️ Tecnologias
 
-Frontend: HTML5, CSS3, JavaScript (ESM)
+-Frontend: HTML5, CSS3, JavaScript (ESM)
 
-Backend: Firebase Firestore + Storage
+-Backend: Firebase Firestore + Storage
 
-Bibliotecas: Chart.js, Boxicons, Poppins
+-Bibliotecas: Chart.js, Boxicons, Poppins
 
-Infraestrutura: GitHub, Firebase Hosting, Google Cloud Console
+-Infraestrutura: GitHub, Firebase Hosting, Google Cloud Console
 
 💡 Superações
 
-Resolver erros de provisionamento do Cloud SQL
+-Resolver erros de provisionamento do Cloud SQL
 
-Ajustar regras de segurança do Firestore
+-Ajustar regras de segurança do Firestore
 
-Corrigir nomes de coleções (servicos sem acento)
+-Corrigir nomes de coleções (servicos sem acento)
 
-Identificar que imports no topo do clientes.js quebravam o site
+-Identificar que imports no topo do clientes.js quebravam o site
 
-Restaurar helpers no firebase.js para recuperar links e botões
+-Restaurar helpers no firebase.js para recuperar links e botões
 
 🎯 Próximos Passos (Desafios)
 
-Fazer o botão Salvar realmente persistir clientes no Firestore
+-Fazer o botão Salvar realmente persistir clientes no Firestore
 
-Corrigir o botão Limpar para resetar campos do formulário
+-Corrigir o botão Limpar para resetar campos do formulário
 
-Resolver bloqueios de Tracking Prevention (Boxicons, Chart.js)
+-Resolver bloqueios de Tracking Prevention (Boxicons, Chart.js)
 
-Melhorar feedback visual de erros (notificações)
+-Melhorar feedback visual de erros (notificações)
 
-Documentar fluxo de edição e exclusão de clientes
+-Documentar fluxo de edição e exclusão de clientes
 
 📌 Conclusão
 
