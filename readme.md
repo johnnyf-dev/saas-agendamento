@@ -41,6 +41,7 @@ Projeto de painel de gestão para barbearia, desenvolvido em HTML, CSS e JavaScr
 🗂️ Estrutura do Projeto
 
 index.html
+
 │
 ├── firebase.js      # Núcleo: Firebase, helpers, estado global
 
