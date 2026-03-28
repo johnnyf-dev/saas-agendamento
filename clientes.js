@@ -484,3 +484,5 @@ export function initClientesTab() {
         updateClientKPIs();
     })();
 }
+// Inicializa a aba de clientes
+/* initClientesTab(); */

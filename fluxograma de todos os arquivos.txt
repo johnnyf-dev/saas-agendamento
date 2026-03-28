@@ -1,0 +1,84 @@
+index.html
+│
+├── Estrutura principal (abas/tabs)
+│       ├── Agenda
+│       ├── Relatórios
+│       ├── Clientes
+│       ├── PDV
+│       └── Configurações
+│
+├── Importa firebase.js (núcleo)
+│       ├── Inicializa Firebase (Firestore + Storage)
+│       ├── Helpers globais (datas, moeda, slugify, generateHours)
+│       ├── Estado global (state: horários, serviços, profissionais, clientes, produtos, relatórios)
+│       ├── Notificações (showNotification)
+│       ├── Modal genérico (mainModal)
+│       ├── Tabs (showTab)
+│       ├── Listeners globais (profissionais + serviços)
+│       └── Inicializa módulos:
+│             ├── initAgendaTab()
+│             ├── initRelatoriosTab()
+│             ├── initClientesTab()
+│             ├── initPdvTab()
+│             └── initConfiguracoesTab()
+│
+├── agenda.js
+│       ├── Helpers de tempo (HH:mm → minutos)
+│       ├── Le disponibilidade (semana + exceções)
+│       ├── Busca agendamentos (fetchAppointmentsDay)
+│       ├── Renderização da grade (slots livres, ocupados, bloqueados)
+│       ├── Modais (novo agendamento, editar, cancelar)
+│       └── Eventos (buscar, filtros, profissional, abrir link externo)
+│
+├── clientes.js
+│       ├── Cadastro de clientes (comuns e RA Club)
+│       ├── Edição, status (ativo/pausado), exclusão
+│       ├── Registro de pagamentos (RA Club)
+│       ├── KPIs (membros ativos, receita estimada)
+│       └── Listeners Firestore (clientes + pagamentos em tempo real)
+│
+├── pdv.js
+│       ├── Cadastro de produtos (nome, preço, estoque)
+│       ├── Edição e exclusão de produtos
+│       ├── Registro de vendas (produto, quantidade, forma de pagamento, profissional)
+│       ├── Atualização de estoque
+│       ├── Listagem de vendas (últimas ou por período)
+│       └── Listeners Firestore (produtos em tempo real)
+│
+├── configuracoes.js
+│       ├── Horários do painel (início, fim, intervalo, pausa almoço)
+│       ├── Semana padrão (dias, horários)
+│       ├── Exceções (salão ou profissional)
+│       ├── Cadastro de profissionais (nome, WhatsApp, foto, ativo/inativo)
+│       ├── Cadastro de serviços (nome, valor, tempo)
+│       └── Listeners Firestore (profissionais + serviços em tempo real)
+│
+├── relatorios.js
+│       ├── Serviços (agendamentos)
+│       │       ├── Busca por período
+│       │       ├── Tabela detalhada
+│       │       ├── KPIs (qtd, bruto, comissão)
+│       │       └── Gráficos (serviço, profissional, grupo RA Club vs Cliente final)
+│       ├── Produtos (vendas)
+│       │       └── Tabela por profissional (qtd, total, comissão)
+│       ├── Despesas (CRUD completo)
+│       │       ├── Salvar, listar, excluir
+│       │       └── Tabelas (aba + modal)
+│       ├── Gestão / Resumo geral
+│       │       ├── KPIs (serviços, produtos, despesas, resultado líquido)
+│       │       └── Resumo por forma de pagamento
+│       ├── Exportação CSV (serviços)
+│       └── Eventos (gerar relatório, exportar, salvar/excluir despesas, abrir modal resumo)
+│
+└── style.css
+        ├── Variáveis globais (cores, sombras, radius)
+        ├── Layout principal (header, nav, page-main)
+        ├── Botões e tabs
+        ├── Cards e formulários
+        ├── Agenda (slots, bloqueios)
+        ├── Relatórios (gráficos, tabelas)
+        ├── PDV (produtos, vendas)
+        ├── Gestão (KPIs, despesas)
+        ├── Configurações (dias, turnos)
+        ├── Modais e notificações
+        └── Responsividade (mobile/tablet)

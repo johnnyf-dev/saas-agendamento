@@ -1,6 +1,78 @@
+   <!-- ============================================
+   FLUXO LÓGICO DO INDEX.HTML • BARBEARIA RA
+   ============================================
+
+   ├── Abas de navegação (Agenda, Relatórios, Clientes, PDV, Configurações)
+   │       └── dispara → troca de seção (JS controla hidden-block)
+   │
+   ├── Agenda
+   │       ├── Seleciona profissional/data/hora
+   │       │       └── dispara → agenda.js → consulta Firebase
+   │       ├── Botões (Buscar, Bloquear, Desbloquear)
+   │       │       └── dispara → agenda.js → atualiza horários
+   │       └── Abrir página de agendamento → redireciona cliente
+   │
+   ├── Relatórios
+   │       ├── Seleciona filtros (profissional, período, grupo)
+   │       │       └── dispara → relatorios.js → gera KPIs e gráficos Chart.js
+   │       ├── Exportar CSV
+   │       │       └── dispara → relatorios.js → exporta dados
+   │       └── Resumo geral
+   │               └── dispara → relatorios.js → consolida entradas/saídas
+   │
+   ├── Clientes / RA Club
+   │       ├── Cadastro de cliente
+   │       │       └── dispara → clientes.js → salva no Firebase
+   │       ├── Lista de clientes
+   │       │       └── clientes.js → popula tabela
+   │       └── Pagamentos RA Club
+   │               └── clientes.js → exibe status
+   │
+   ├── PDV / Produtos
+   │       ├── Cadastro de produto
+   │       │       └── pdv.js → salva no Firebase
+   │       ├── Lista de produtos
+   │       │       └── pdv.js → popula tabela
+   │       ├── Registrar venda
+   │       │       └── pdv.js → atualiza estoque e registra venda
+   │       └── Últimas vendas
+   │               └── pdv.js → filtra por período
+   │
+   ├── Configurações
+   │       ├── Funcionamento (dias, horários, intervalos, pausas)
+   │       │       └── configuracao.js → salva no Firebase
+   │       ├── Exceções (folgas, horários especiais)
+   │       │       └── configuracao.js → adiciona exceção
+   │       ├── Profissionais
+   │       │       └── configuracao.js → cadastra/edita profissional
+   │       └── Serviços
+   │               └── configuracao.js → cadastra serviço
+   │
+   └── Modais (Resumo geral, genérico)
+           └── relatorios.js/configuracao.js → preenche conteúdo dinâmico
+
+FUNÇÕES PRINCIPAIS:
+- agenda.js → controla horários e bloqueios
+- relatorios.js → gera relatórios, KPIs e gráficos
+- clientes.js → gerencia clientes e pagamentos RA Club
+- pdv.js → controla produtos, estoque e vendas
+- configuracao.js → define funcionamento, exceções, profissionais e serviços
+- firebase.js → integra com Firestore
+============================================ -->
+
+<!-- ============================================
+      ██╗ ██████╗ 
+      ██║██╔═══██╗
+      ██║██║   ██║
+ ██   ██║██║   ██║
+ ╚█████╔╝╚██████╔╝
+  ╚════╝  ╚═════╝ 
+   JohnnyF. Dev
+============================================-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+    
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1021,6 +1093,7 @@
     </div>
 
     <script type="module" src="./firebase.js"></script>
+    <script type="module" src="./clientes.js"></script>
 
     <script>
         (function () {

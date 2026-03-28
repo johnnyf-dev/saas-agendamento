@@ -40,7 +40,13 @@ import { initConfiguracoesTab } from "./configuracoes.js";
 
 /* ========= Firebase ========= */
 const firebaseConfig = {
- 
+  apiKey: "AIzaSyArl6hK7LpynGhiEePCdFL9kPA9NiqpLtw",
+  authDomain: "johnnyfdev-saas1.firebaseapp.com",
+  projectId: "johnnyfdev-saas1",
+  storageBucket: "johnnyfdev-saas1.firebasestorage.app",
+  messagingSenderId: "124193132130",
+  appId: "1:124193132130:web:4718c567829472bfa70b3b",
+  measurementId: "G-D9JW51B768"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -237,7 +243,7 @@ export async function waitForAuth() {
 }
 
 /* ========= Estado compartilhado ========= */
-export const BOOKING_URL = ""; // link do site de agendamento externo (se houver)
+export const BOOKING_URL = "https://johnnyfdev-saas1.web.app"; // link do site de agendamento externo (se houver)
 
 export const PAYMENT_METHODS = [
   "PIX",
