@@ -43,12 +43,19 @@ Projeto de painel de gestão para barbearia, desenvolvido em HTML, CSS e JavaScr
 index.html
 │
 ├── firebase.js      # Núcleo: Firebase, helpers, estado global
+
 ├── clientes.js      # Aba Clientes: cadastro, edição, pagamentos, KPIs
+
 ├── agenda.js        # Aba Agenda
+
 ├── pdv.js           # Aba PDV
+
 ├── configuracoes.js # Aba Configurações
+
 ├── relatorios.js    # Aba Relatórios
+
 └── css/style.css    # Estilos globais
+
 
 🔄 Linha do Tempo das Manipulações
 
