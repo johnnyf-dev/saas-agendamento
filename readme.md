@@ -1,6 +1,4 @@
-Barbearia RA — Sistema de Gestão
-
-![GitHub](refid:GitHub logo) ![Firebase Hosting](refid:Firebase Hosting logo) ![Firestore](refid:Firestore database console) ![Google Cloud](refid:Google Cloud Console logo) ![Chart.js](refid:Chart.js logo) ![Boxicons](refid:Boxicons logo) ![Frontend](refid:HTML5 CSS3 JavaScript logo) ![Dashboard](refid:Barbearia management system dashboard)
+🚀 Barbearia RA — Sistema de Gestão
 
 📌 Visão GeralProjeto de painel de gestão para barbearia, desenvolvido em HTML, CSS e JavaScript (ESM) com integração ao Firebase (Firestore + Storage). Centraliza agenda, clientes, PDV, relatórios e configurações, com interface moderna e responsiva. Resolvi trabalhar com a manutenção do código, já que os links estavam quebrados e decidi me desafiar com algo novo que não havia mexido antes.
 
